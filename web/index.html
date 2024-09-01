@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <script type="text/javascript" src="/eel.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1
+          class="fade-in"
+          data-en="Expense Tracker 3000"
+          data-ru="Трекер Расходов 3000"
+        ></h1>
+        <div class="settings">
+          <img src="img/settings.png" alt="Settings" id="settingsIcon" />
+          <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </select>
+        </div>
+      </header>
+      <form id="expenseForm" class="fade-in">
+        <input type="date" id="date" required />
+        <input
+          type="number"
+          id="amount"
+          placeholder="Amount"
+          data-en="Amount"
+          data-ru="Сумма"
+          required
+        />
+        <select id="category" required>
+          <option
+            value=""
+            data-en="Select Category"
+            data-ru="Выберите Категорию"
+          ></option>
+          <!-- Categories will be populated by JavaScript -->
+        </select>
+        <button
+          type="button"
+          id="addCustomCategory"
+          data-en="Add Custom Category"
+          data-ru="Добавить Свою Категорию"
+        ></button>
+        <button
+          type="submit"
+          data-en="Add Expense"
+          data-ru="Добавить Расход"
+        ></button>
+      </form>
+      <div id="expenseList" class="fade-in"></div>
+      <div id="chartContainer" class="fade-in">
+        <img id="expenseChart" alt="Expense Chart" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
